@@ -1,1 +1,56 @@
-brownish
+<html>
+<head></head>
+<body>
+	<style>
+		.big {
+			font-size: 40px;
+			translate: 0 100px;
+		}
+		p {
+			display:flex; 
+			align-items: center; 
+			justify-content: center; 
+			width:100%; 
+			height:100%;
+		}
+	</style>
+
+	<div>
+		<p id="squirrel-text" onclick="change_text()" style="transition: all ease 1s;">hi we are squirrel and squirrel (click me!!)</p>
+	</div>
+</body>
+
+<script>
+	const paragraphs = [
+		"we are hazel and azlan",
+		"we have some big dreams of moving in together and adopting 2 cute bengal cats",
+		"we have so many side projects...",
+		"we are trying to make a pair of very baggy denim pants...",
+		"we are trying to start an instagram account to meet more creative people. (we have 30 followers so that's going great)",
+		"we love to play 20 questions and overcooked", 
+		"our favourite 20 questions topic is rodents :) in our defense most are cute",
+		"did you know there's a rodent called a fancy rat?",
+		"like that's the real scientific name for it",
+		"we are making a zine for astoria!!", 
+		"we are trying to design our own jewelry! (3D CADs and also wax carving)",
+		"if you live in astoria, or you want to do some art together, please let us know! we would love to be friends <3",
+		"or if you want any Astoria food/ activity recommendations we got you",
+		"IG: brownisheats",
+	];
+	let i = 0;
+	function change_text() {
+		const squirrel_text = document.getElementById("squirrel-text");
+		squirrel_text.innerText = paragraphs[i];
+		if(i == paragraphs.length - 1) {
+			squirrel_text.className = "big";
+		} else {
+			squirrel_text.className = "";
+		}
+
+		i++;
+		if(i >= paragraphs.length) {
+			i = 0;
+		}
+	}
+</script>
+</html>
